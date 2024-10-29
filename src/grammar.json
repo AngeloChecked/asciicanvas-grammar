@@ -1,0 +1,98 @@
+{
+  "$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/grammar.schema.json",
+  "name": "asciicanvas",
+  "rules": {
+    "source_file": {
+      "type": "REPEAT",
+      "content": {
+        "type": "SYMBOL",
+        "name": "_definition"
+      }
+    },
+    "_definition": {
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "SYMBOL",
+          "name": "char"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "white"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "black"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "red"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "blue"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "yellow"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "green"
+        }
+      ]
+    },
+    "white": {
+      "type": "PATTERN",
+      "value": "#+"
+    },
+    "black": {
+      "type": "PATTERN",
+      "value": "@+"
+    },
+    "red": {
+      "type": "PATTERN",
+      "value": "R+"
+    },
+    "blue": {
+      "type": "PATTERN",
+      "value": "B+"
+    },
+    "yellow": {
+      "type": "PATTERN",
+      "value": "Y+"
+    },
+    "green": {
+      "type": "PATTERN",
+      "value": "G+"
+    },
+    "char": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "\""
+        },
+        {
+          "type": "PATTERN",
+          "value": "[^\"]+"
+        },
+        {
+          "type": "STRING",
+          "value": "\""
+        }
+      ]
+    }
+  },
+  "extras": [
+    {
+      "type": "PATTERN",
+      "value": "\\s"
+    }
+  ],
+  "conflicts": [],
+  "precedences": [],
+  "externals": [],
+  "inline": [],
+  "supertypes": []
+}

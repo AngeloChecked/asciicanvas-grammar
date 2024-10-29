@@ -1,0 +1,75 @@
+[
+  {
+    "type": "char",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "source_file",
+    "named": true,
+    "root": true,
+    "fields": {},
+    "children": {
+      "multiple": true,
+      "required": false,
+      "types": [
+        {
+          "type": "black",
+          "named": true
+        },
+        {
+          "type": "blue",
+          "named": true
+        },
+        {
+          "type": "char",
+          "named": true
+        },
+        {
+          "type": "green",
+          "named": true
+        },
+        {
+          "type": "red",
+          "named": true
+        },
+        {
+          "type": "white",
+          "named": true
+        },
+        {
+          "type": "yellow",
+          "named": true
+        }
+      ]
+    }
+  },
+  {
+    "type": "\"",
+    "named": false
+  },
+  {
+    "type": "black",
+    "named": true
+  },
+  {
+    "type": "blue",
+    "named": true
+  },
+  {
+    "type": "green",
+    "named": true
+  },
+  {
+    "type": "red",
+    "named": true
+  },
+  {
+    "type": "white",
+    "named": true
+  },
+  {
+    "type": "yellow",
+    "named": true
+  }
+]
